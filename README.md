@@ -80,3 +80,13 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+```bash
+curl -X POST https://gateway.pipeworx.io/v1/tools/midpoint \
+  -H 'Content-Type: application/json' \
+  -d '{"lat1":40.7128,"lon1":-74.006,"lat2":34.0522,"lon2":-118.2437}'
+```
+
+No account needed for the first calls. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/midpoint`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
