@@ -1,0 +1,97 @@
+[
+  {
+    "name": "midpoint",
+    "description": "Geographic (great-circle) midpoint between two lat/lon points.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat1": {
+          "type": "number"
+        },
+        "lon1": {
+          "type": "number"
+        },
+        "lat2": {
+          "type": "number"
+        },
+        "lon2": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat1",
+        "lon1",
+        "lat2",
+        "lon2"
+      ]
+    }
+  },
+  {
+    "name": "centroid",
+    "description": "Average (spherical) center of a list of lat/lon points. `points` is an array of {lat, lon}.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "points": {
+          "type": "array",
+          "description": "Array of {lat, lon} objects."
+        }
+      },
+      "required": [
+        "points"
+      ]
+    }
+  },
+  {
+    "name": "bounding_box",
+    "description": "Bounding box (SW/NE corners) around a center point at a given radius. `unit` = km (default) or mi.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "radius": {
+          "type": "number",
+          "description": "Radius from the center."
+        },
+        "unit": {
+          "type": "string",
+          "description": "km (default) or mi."
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "radius"
+      ]
+    }
+  },
+  {
+    "name": "point_in_bbox",
+    "description": "Test whether a lat/lon point is inside a bounding box \"minLat,minLon,maxLat,maxLon\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "bbox": {
+          "type": "string",
+          "description": "e.g. \"20,-130,55,-60\"."
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "bbox"
+      ]
+    }
+  }
+]
