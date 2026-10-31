@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-coordinates",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Coordinate geometry MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "coordinates",
     "gatewaySlug": "coordinates",
-    "sourceHash": "v1-a57d24efe7067c2e1893ce0d901f3a80820111d56f9d25bba666dd3e5b72b40d",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-d6011e287258c1d10f4a36b963b8b421aa5bcf49bf140e92def54e1c6947f7c3",
+    "sourceCommit": "8cc978183948532674e797c429305c9d8ab2a1c3"
   }
 }
